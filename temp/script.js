@@ -342,19 +342,19 @@ window.addEventListener('scroll', () => {
 });
 
 // Glitch effect for navbar on scroll
-let lastScrollY = window.scrollY;
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    const currentScrollY = window.scrollY;
+//let lastScrollY = window.scrollY;
+//window.addEventListener('scroll', () => {
+//    const navbar = document.getElementById('navbar');
+//    const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.style.transform = 'translateY(0)';
-    }
+//    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+//        navbar.style.transform = 'translateY(-100%)';
+//    } else {
+//        navbar.style.transform = 'translateY(0)';
+//    }
 
-    lastScrollY = currentScrollY;
-});
+//    lastScrollY = currentScrollY;
+//});
 
 // Add cyber glitch effects
 function addGlitchEffect() {
