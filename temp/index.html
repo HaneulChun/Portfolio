@@ -54,7 +54,7 @@
             <a href="#projects" class="mobile-link" data-section="projects">Projects</a>
             <a href="#skills" class="mobile-link" data-section="skills">Skills</a>
             <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
-            <a href="assets/HaneulResume.pdf" class="my-mobile-link" target="_blank" download>Download Resume</a>
+            <a href="assets/HaneulResume.pdf" class="resume-btn" target="_blank" download>Download Resume</a>
         </div>
     </nav>
 
@@ -108,20 +108,6 @@
                 <button class="btn btn-secondary matrix-btn" onclick="scrollToSection('contact')">
                     <span class="btn-content">ESTABLISH_CONNECTION</span>
                 </button>
-            </div>
-        </div>
-        <div class="hero-stats">
-            <div class="stat-item">
-                <div class="stat-value" data-target="2">0</div>
-                <div class="stat-label">PROJECTS_COMPLETED</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value" data-target="4">0</div>
-                <div class="stat-label">TECH_STACK</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value" data-target="100">0</div>
-                <div class="stat-label">PASSION_LEVEL</div>
             </div>
         </div>
     </section>
@@ -235,6 +221,7 @@
                 <span class="title-bracket">/&gt;</span>
             </h2>
             <div class="projects-grid">
+                <!-- Neon Nexus -->
                 <div class="project-card neon-card" onclick="openModal('neonNexusModal')">
                     <div class="project-header">
                         <div class="project-status">
@@ -259,7 +246,7 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">NEON_NEXUS.UNITY</h3>
-                        <p class="project-description">Advanced 2D stealth system with intelligent AI behavior patterns and dynamic enemy search algorithms.</p>
+                        <p class="project-description">Neon-Nexus is a 2D stealth game built with Unity. It features AI-driven enemies that actively search for the player, creating dynamic and challenging gameplay.</p>
                         <div class="project-tech">
                             <span class="tech-tag unity">UNITY_ENGINE</span>
                             <span class="tech-tag csharp">C#_SCRIPTS</span>
@@ -267,17 +254,18 @@
                         </div>
                         <div class="project-metrics">
                             <div class="metric">
-                                <span class="metric-value">95%</span>
+                                <span class="metric-value">95</span>
                                 <span class="metric-label">STEALTH_EFFICIENCY</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-value">12</span>
-                                <span class="metric-label">AI_STATES</span>
+                                <span class="metric-value">3</span>
+                                <span class="metric-label">Enemys</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sweet Spot -->
                 <div class="project-card cyber-card" onclick="openModal('sweetSpotModal')">
                     <div class="project-header">
                         <div class="project-status">
@@ -302,11 +290,13 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">SWEET_SPOT.UE5</h3>
-                        <p class="project-description">Immersive 3D horror-puzzle experience featuring advanced Focus mechanics and atmospheric tension systems.</p>
+                        <p class="project-description">Sweet Spot is a 3D puzzle game with horror elements, built in Unreal Engine. 
+                            Players use a Focus ability to uncover hints while navigating unsettling, maze-like environments.
+                        </p>
                         <div class="project-tech">
                             <span class="tech-tag unreal">UNREAL_ENGINE</span>
                             <span class="tech-tag cpp">C++_CORE</span>
-                            <span class="tech-tag horror">HORROR_DESIGN</span>
+                            <span class="tech-tag horror">GAMEPLAY_LOGIC</span>
                         </div>
                         <div class="project-metrics">
                             <div class="metric">
@@ -314,8 +304,8 @@
                                 <span class="metric-label">FEAR_FACTOR</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-value">24</span>
-                                <span class="metric-label">PUZZLE_LAYERS</span>
+                                <span class="metric-value">3</span>
+                                <span class="metric-label">CAMERA_FEATURES</span>
                             </div>
                         </div>
                     </div>
@@ -343,7 +333,7 @@
             <div class="modal-body">
                 <div class="modal-image">
                     <div class="image-container">
-                        <img src="images/Neon-Nexus.png" alt="Neon-Nexus Gameplay" />
+                        <img src="Assets/NeonNexusGif.gif" alt="Neon-Nexus Gameplay" />
                         <div class="image-scan-effect"></div>
                     </div>
                 </div>
@@ -352,7 +342,7 @@
                         <span class="tech-tag unity">UNITY_ENGINE</span>
                         <span class="tech-tag csharp">C#_SCRIPTS</span>
                         <span class="tech-tag ai">AI_SYSTEMS</span>
-                        <span class="tech-tag stealth">STEALTH_MECHANICS</span>
+                        <span class="tech-tag GameDev">2D Game Development</span>
                     </div>
 
                     <div class="detail-section">
@@ -360,7 +350,7 @@
                             <span class="section-icon">&gt;</span>
                             PROJECT_OVERVIEW
                         </h3>
-                        <p>Advanced 2D stealth experience featuring sophisticated AI behavior systems and dynamic gameplay mechanics. Built with Unity and C#, showcasing cutting-edge enemy intelligence and player detection algorithms.</p>
+                        <p>Neon Nexus is a Top Down, 2.5D, Stealth game. Where you play as the repair bot Roko, who has broken free from the AI Hive Mind. While Navigating the Maze Like floors of the Basilisk Tower you will use Roko’s Omni-Tool to temporarily Disable Patrol Bots and to Solve Puzzles while progressing to the super computer at the top of the tower in order to Destroy the AI Hive Mind and free the other robots.</p>
                     </div>
 
                     <div class="detail-section">
@@ -369,10 +359,9 @@
                             CORE_FEATURES
                         </h3>
                         <ul class="feature-list">
-                            <li><span class="feature-bullet">▶</span><strong>Advanced AI System:</strong> Multi-state enemy behavior with adaptive search patterns</li>
-                            <li><span class="feature-bullet">▶</span><strong>Dynamic Stealth Mechanics:</strong> Line-of-sight detection and sound-based alerting</li>
-                            <li><span class="feature-bullet">▶</span><strong>Interactive Environment:</strong> Manipulatable lighting and distraction systems</li>
-                            <li><span class="feature-bullet">▶</span><strong>Progressive Difficulty:</strong> Adaptive AI that learns from player behavior</li>
+                            <li><span class="feature-bullet">▶</span><strong>AI System:</strong> Enemies patrol with vision cones and avoid obstacles</li>
+                            <li><span class="feature-bullet">▶</span><strong>Enemy Variety:</strong> Includes ground units, flying scouts, and cameras</li>
+                            <li><span class="feature-bullet">▶</span><strong>Combat:</strong> Players can stun ground enemies to slip past.</li>
                         </ul>
                     </div>
 
@@ -382,10 +371,10 @@
                             TECHNICAL_IMPLEMENTATION
                         </h3>
                         <ul class="feature-list">
-                            <li><span class="feature-bullet">▶</span>State machine-based AI with Patrol, Alert, Search, and Chase modes</li>
-                            <li><span class="feature-bullet">▶</span>Custom pathfinding algorithms for optimized enemy movement</li>
-                            <li><span class="feature-bullet">▶</span>Modular stealth detection system with configurable parameters</li>
-                            <li><span class="feature-bullet">▶</span>Performance optimization maintaining 60fps on target platforms</li>
+                            <li><span class="feature-bullet">▶</span>Enemies patrol predefined paths and switch to chase mode when the player is detected</li>
+                            <li><span class="feature-bullet">▶</span>Player detection is handled through raycast-based vision cones that check line-of-sight in real time</li>
+                            <li><span class="feature-bullet">▶</span>Ground enemies can be stunned by player projectiles, temporarily disabling their behavior</li>
+                            <li><span class="feature-bullet">▶</span>player detection meter that fills when in enemy vision</li>
                         </ul>
                     </div>
                 </div>
@@ -411,8 +400,7 @@
             <div class="modal-body">
                 <div class="modal-image">
                     <div class="image-container">
-                        <img src="images/Sweet-Spot.png" alt="Sweet Spot Gameplay" />
-                        <div class="image-glitch-effect"></div>
+                        <img src="assets/SweetSpotGif.gif" alt="Sweet Spot Gameplay" />
                     </div>
                 </div>
                 <div class="modal-details">
@@ -428,7 +416,8 @@
                             <span class="section-icon">&gt;</span>
                             PROJECT_OVERVIEW
                         </h3>
-                        <p>Immersive 3D horror-puzzle experience built in Unreal Engine. Features unique Focus ability mechanics and psychological tension systems designed to create an unsettling yet engaging player experience.</p>
+                        <p>Sweet Spot is a first-person puzzle-horror game where you play as a hotel concierge trapped in a looping hallway by an eldritch horror. Manage your Madness Meter—Sane, The Sweet Spot, and Mad. 
+                            While in The Sweet Spot, use your Focus ability to reveal hidden items, solve puzzles, and find the missing elevator pieces to escape.</p>
                     </div>
 
                     <div class="detail-section">
@@ -439,8 +428,7 @@
                         <ul class="feature-list">
                             <li><span class="feature-bullet">▶</span><strong>Focus Ability System:</strong> Unique mechanic revealing hidden environmental clues</li>
                             <li><span class="feature-bullet">▶</span><strong>Atmospheric Horror:</strong> Psychological tension through environmental storytelling</li>
-                            <li><span class="feature-bullet">▶</span><strong>Complex Puzzle Design:</strong> Multi-layered challenges requiring observation and logic</li>
-                            <li><span class="feature-bullet">▶</span><strong>Immersive Audio:</strong> 3D spatial audio enhancing horror atmosphere</li>
+                            <li><span class="feature-bullet">▶</span><strong>Madness Meter:</strong>Sane / Focus / Mad, with Madness increasing indoors and easing in halls</li>
                         </ul>
                     </div>
 
@@ -450,10 +438,9 @@
                             TECHNICAL_IMPLEMENTATION
                         </h3>
                         <ul class="feature-list">
-                            <li><span class="feature-bullet">▶</span>Custom Focus ability system using Blueprint and C++ integration</li>
-                            <li><span class="feature-bullet">▶</span>Advanced lighting system for dramatic atmospheric effects</li>
-                            <li><span class="feature-bullet">▶</span>Modular puzzle framework enabling rapid level design iteration</li>
-                            <li><span class="feature-bullet">▶</span>Optimized rendering pipeline for complex indoor environments</li>
+                            <li><span class="feature-bullet">▶</span>Tentacle and eye entities that fade when looked at while in Focus mode</li>
+                            <li><span class="feature-bullet">▶</span>Smooth camera with adjustable FOV, vignette, and chromatic aberration effects</li>
+                            <li><span class="feature-bullet">▶</span>Objects that fade in and out of reality based on the player’s Madness</li>
                         </ul>
                     </div>
                 </div>
