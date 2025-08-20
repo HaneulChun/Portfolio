@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\cblue\\MyPortfolio\\temp\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAJ0BAAAAAAAAAAAkwLQBAABCAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-08-10T06:36:10.947Z",
               "EditorCaption": ""
@@ -45,9 +45,10 @@
               "RelativeDocumentMoniker": "styles.css",
               "ToolTip": "C:\\Users\\cblue\\MyPortfolio\\temp\\styles.css",
               "RelativeToolTip": "styles.css",
-              "ViewState": "AgIAAB0EAAAAAAAAAAAAADkEAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-10T06:37:03.368Z"
+              "WhenOpened": "2025-08-10T06:37:03.368Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,9 +58,10 @@
               "RelativeDocumentMoniker": "script.js",
               "ToolTip": "C:\\Users\\cblue\\MyPortfolio\\temp\\script.js",
               "RelativeToolTip": "script.js",
-              "ViewState": "AQIAAK4BAAAAAAAAAAAiwNYBAAADAAAA",
+              "ViewState": "AgIAALABAAAAAAAAAAAAAMIBAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-10T06:36:27.549Z"
+              "WhenOpened": "2025-08-10T06:36:27.549Z",
+              "EditorCaption": ""
             }
           ]
         }
