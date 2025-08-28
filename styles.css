@@ -1381,6 +1381,10 @@ section {
     grid-template-columns: repeat(3, 1fr); /* 3 categories side by side */
     gap: 2rem;
     margin-top: 2rem;
+
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .skills-category {
