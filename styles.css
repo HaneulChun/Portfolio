@@ -1430,6 +1430,16 @@ section {
         border-color: #ff0066;
     }
 
+.skills-col {
+    outline: 1px solid red;
+}
+
+.skills-table {
+    outline: 1px solid blue;
+}
+
+
+
 /* Contact Section */
 .contact {
     background: rgba(10, 10, 10, 0.5);
