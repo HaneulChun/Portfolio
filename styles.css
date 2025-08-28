@@ -20,9 +20,11 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 /* Custom Scrollbar */
@@ -1427,8 +1429,6 @@ section {
         box-shadow: 0 15px 30px rgba(0, 255, 136, 0.4);
         border-color: #ff0066;
     }
-
-
 
 /* Contact Section */
 .contact {
