@@ -1380,13 +1380,16 @@ section {
 /* Skills Section */
 .skills-table {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 categories side by side */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
-
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+}
+
+.skills-col {
+    margin: 0;
 }
 
 .skills-category {
@@ -1429,14 +1432,6 @@ section {
         box-shadow: 0 15px 30px rgba(0, 255, 136, 0.4);
         border-color: #ff0066;
     }
-
-/*.skills-col {
-    outline: 2px solid red;
-}
-
-.skills-table {
-    outline: 2px solid blue;
-}*/
 
 
 
