@@ -1813,6 +1813,10 @@ section {
             flex-direction: column;
             gap: 0.5rem;
         }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
     }
 
     @media (max-width: 1200px) {
@@ -1909,6 +1913,10 @@ section {
     .contact-title {
         font-size: 1rem;
         margin: 0.5rem 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
     }
 
     .contact-description {
