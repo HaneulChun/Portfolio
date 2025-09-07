@@ -1323,6 +1323,26 @@ section {
     margin-bottom: 2rem;
 }
 
+.detail-link {
+    border: 1px solid; /* Light gray border */
+    border-radius: 6px; /* Rounded corners (optional) */
+    color: #00ff88;
+    border-color: #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+
+    /* padding */
+    padding: 8px;
+    padding-bottom: 4px;
+}
+
+.detail-links-section {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .detail-title {
     font-family: 'Orbitron', monospace;
     color: #00ff88;
