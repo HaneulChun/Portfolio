@@ -1184,11 +1184,16 @@ section {
     padding: 2rem;
     background: linear-gradient(90deg, rgba(0, 255, 136, 0.2), rgba(0, 204, 102, 0.2));
     border-bottom: 2px solid #00ff88;
+
+    width: fit-content;
+    min-width: 100%;
 }
 
 .horror-modal .modal-header {
     background: linear-gradient(90deg, rgba(255, 0, 102, 0.2), rgba(255, 51, 136, 0.2));
     border-bottom-color: #ff0066;
+    width: fit-content;
+    min-width: 100%; 
 }
 
 .modal-title-section {
