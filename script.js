@@ -62,69 +62,58 @@ function openModal(modalId) {
     }
 }
 
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restore scrolling
+
+function toggleFeature(featureId) {
+    const element = document.getElementById(featureId);
+    const button = event.target.closest('.toggle-btn');
+
+    element.classList.toggle('expanded');
+
+    const isExpanded = element.classList.contains('expanded');
+    const span = button.querySelector('span:first-child');
+    const arrow = button.querySelector('span:last-child');
+
+    if (isExpanded) {
+        span.textContent = 'See less';
+        arrow.textContent = '▲';
+    } else {
+        span.textContent = 'See more';
+        arrow.textContent = '▼';
     }
 }
 
-// Close modal when clicking outside
-window.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal')) {
-        closeModal(e.target.id);
-    }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        const openModals = document.querySelectorAll('.modal[style*="block"]');
-        openModals.forEach(modal => {
-            closeModal(modal.id);
-        });
-    }
-});
-
-// Modal functionality
-function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    }
+function closeModal() {
+    document.querySelector('.modal-overlay').style.display = 'none';
 }
-
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restore scrolling
-    }
-}
-
-// Close modal when clicking outside
-window.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal')) {
-        closeModal(e.target.id);
-    }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        const openModals = document.querySelectorAll('.modal[style*="block"]');
-        openModals.forEach(modal => {
-            closeModal(modal.id);
-        });
-    }
-});
 
 // Scroll event listener for active section highlighting
 window.addEventListener('scroll', updateActiveSection);
 
 // Animated counters for hero stats
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+        closeModal(e.target.id);
+    }
+});
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const openModals = document.querySelectorAll('.modal[style*="block"]');
+        openModals.forEach(modal => {
+            closeModal(modal.id);
+        });
+    }
+});
+
 function animateCounters() {
     const counters = document.querySelectorAll('.stat-value');
 

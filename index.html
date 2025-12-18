@@ -354,16 +354,72 @@
                         <p>Neon Nexus is a Top Down, 2.5D, Stealth game. Where you play as the repair bot Roko, who has broken free from the AI Hive Mind. While Navigating the Maze Like floors of the Basilisk Tower you will use Roko’s Omni-Tool to temporarily Disable Patrol Bots and to Solve Puzzles while progressing to the super computer at the top of the tower in order to Destroy the AI Hive Mind and free the other robots.</p>
                     </div>
 
-                    <div class="detail-section">
-                        <h3 class="detail-title">
+                    <!-- Core Features -->
+                    <div class="detail-section"> <!-- section -->
+                        <div class="detail-title"> <!-- section-title -->
                             <span class="section-icon">&gt;</span>
                             CORE_FEATURES
-                        </h3>
-                        <ul class="feature-list">
-                            <li><span class="feature-bullet">▶</span><strong>AI System:</strong> Enemies patrol with vision cones and avoid obstacles</li>
-                            <li><span class="feature-bullet">▶</span><strong>Enemy Variety:</strong> Includes ground units, flying scouts, and cameras</li>
-                            <li><span class="feature-bullet">▶</span><strong>Combat:</strong> Players can stun ground enemies to slip past.</li>
-                        </ul>
+                        </div>
+
+                        <!-- AI System -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <span class="feature-bullet">▶</span>
+                                    <div>
+                                        <strong>AI System:</strong>
+                                        <span>Enemies patrol with vision cones and avoid obstacles</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" onclick="toggleFeature('aiSystem')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="aiSystem">
+                                <p>Advanced pathfinding algorithms enable enemies to navigate complex environments while maintaining realistic patrol patterns. The vision cone system uses dynamic raycasting to detect player presence, with adjustable detection ranges and angles. Enemies intelligently avoid obstacles and can coordinate with nearby units when threats are detected. The AI switches seamlessly between patrol, alert, and chase states, creating dynamic and challenging stealth gameplay.</p>
+                            </div>
+                        </div>
+
+                        <!-- Enemy Variety -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <span class="feature-bullet">▶</span>
+                                    <div>
+                                        <strong>Enemy Variety:</strong>
+                                        <span class="feature-short">Includes ground units, flying scouts, and cameras</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" onclick="toggleFeature('enemyVariety')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="enemyVariety">
+                                <p>Ground units patrol designated paths with 180-degree vision cones and can be stunned by player attacks. Flying scouts hover above the battlefield with 360-degree detection radius, immune to ground-based attacks but can be temporarily disabled by EMP abilities. Static cameras cover key chokepoints with laser-grid patterns, requiring precise timing to navigate. Each enemy type demands unique tactical approaches, forcing players to adapt their stealth strategies throughout the tower.</p>
+                            </div>
+                        </div>
+
+                        <!-- Combat -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <span class="feature-bullet">▶</span>
+                                    <div>
+                                        <strong>Combat:</strong>
+                                        <span class="feature-short">Players can stun ground enemies to slip past</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" onclick="toggleFeature('combat')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="combat">
+                                <p>Roko's Omni-Tool fires charged projectiles that temporarily disable ground-based patrol bots for 8-10 seconds. The tool has a cooldown period, requiring strategic timing and resource management. Stunned enemies emit a warning signal before recovering, giving players a brief window to pass or hide. The combat system encourages non-lethal approaches, rewarding stealth over aggression. Players must choose between engaging enemies or using alternative routes, adding depth to level traversal.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="detail-section">
