@@ -65,22 +65,35 @@ function openModal(modalId) {
 
 function toggleFeature(featureId) {
     const element = document.getElementById(featureId);
-    const button = event.target.closest('.toggle-btn');
 
     element.classList.toggle('expanded');
-
     const isExpanded = element.classList.contains('expanded');
-    const span = button.querySelector('span:first-child');
-    const arrow = button.querySelector('span:last-child');
 
-    if (isExpanded) {
-        span.textContent = 'See less';
-        arrow.textContent = '▲';
-    } else {
-        span.textContent = 'See more';
-        arrow.textContent = '▼';
-    }
+    // Select ALL buttons that control this feature
+    const buttons = document.querySelectorAll(
+        `[data-feature="${featureId}"]`
+    );
+
+    buttons.forEach(button => {
+
+        // Text button (See more / See less)
+        const textSpan = button.querySelector('span:first-child');
+        const textArrow = button.querySelector('span:last-child');
+
+        if (button.classList.contains('toggle-btn')) {
+            textSpan.textContent = isExpanded ? 'See less' : 'See more';
+            textArrow.textContent = isExpanded ? '▲' : '▼';
+        }
+
+        // Bullet button (▶ / ▼)
+        const bullet = button.querySelector('.feature-bullet');
+        if (bullet) {
+            bullet.textContent = isExpanded ? '▼' : '▶';
+        }
+    });
 }
+
+
 
 function closeModal() {
     document.querySelector('.modal-overlay').style.display = 'none';

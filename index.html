@@ -351,7 +351,11 @@
                             <span class="section-icon">&gt;</span>
                             PROJECT_OVERVIEW
                         </h3>
-                        <p>Neon Nexus is a Top Down, 2.5D, Stealth game. Where you play as the repair bot Roko, who has broken free from the AI Hive Mind. While Navigating the Maze Like floors of the Basilisk Tower you will use Roko’s Omni-Tool to temporarily Disable Patrol Bots and to Solve Puzzles while progressing to the super computer at the top of the tower in order to Destroy the AI Hive Mind and free the other robots.</p>
+                        <p>
+                            Neon Nexus is a Top Down, 2.5D, Stealth game. Where you play as the repair bot Roko, who has broken free from the AI Hive Mind. 
+                            While Navigating the Maze Like floors of the Basilisk Tower you will use Roko’s Omni-Tool to temporarily Disable Patrol Bots and to Solve Puzzles while 
+                            progressing to the super computer at the top of the tower in order to Destroy the AI Hive Mind and free the other robots.
+                        </p>
                     </div>
 
                     <!-- Core Features -->
@@ -365,19 +369,25 @@
                         <div class="feature-item">
                             <div class="feature-header">
                                 <div class="feature-title">
-                                    <span class="feature-bullet">▶</span>
+                                    <button class="toggle-btn-bullet" data-feature="aiSystem" onclick="toggleFeature('aiSystem')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
                                     <div>
                                         <strong>AI System:</strong>
                                         <span>Enemies patrol with vision cones and avoid obstacles</span>
                                     </div>
                                 </div>
-                                <button class="toggle-btn" onclick="toggleFeature('aiSystem')">
+                                <button class="toggle-btn" data-feature="aiSystem" onclick="toggleFeature('aiSystem')">
                                     <span>See more</span>
                                     <span style="font-size: 14px;">▼</span>
                                 </button>
                             </div>
                             <div class="feature-full" id="aiSystem">
-                                <p>Advanced pathfinding algorithms enable enemies to navigate complex environments while maintaining realistic patrol patterns. The vision cone system uses dynamic raycasting to detect player presence, with adjustable detection ranges and angles. Enemies intelligently avoid obstacles and can coordinate with nearby units when threats are detected. The AI switches seamlessly between patrol, alert, and chase states, creating dynamic and challenging stealth gameplay.</p>
+                                <p>
+                                    Enemies move along predefined patrol routes while intelligently avoiding obstacles using a <b>navigation mesh</b>.
+                                    Equipped with <b>vision cones</b>, they detect players entering their line of sight and will immediately <b>chase</b>, breaking from their routine.
+                                    Designers can customize patrol patterns and detection parameters, allowing for varied behaviors that challenge the player’s stealth skills at every turn.
+                                </p>
                             </div>
                         </div>
 
@@ -385,19 +395,27 @@
                         <div class="feature-item">
                             <div class="feature-header">
                                 <div class="feature-title">
-                                    <span class="feature-bullet">▶</span>
+                                    <button class="toggle-btn-bullet" data-feature="enemyVariety" onclick="toggleFeature('enemyVariety')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
                                     <div>
                                         <strong>Enemy Variety:</strong>
                                         <span class="feature-short">Includes ground units, flying scouts, and cameras</span>
                                     </div>
                                 </div>
-                                <button class="toggle-btn" onclick="toggleFeature('enemyVariety')">
+                                <button class="toggle-btn" data-feature="enemyVariety" onclick="toggleFeature('enemyVariety')">
                                     <span>See more</span>
                                     <span style="font-size: 14px;">▼</span>
                                 </button>
                             </div>
                             <div class="feature-full" id="enemyVariety">
-                                <p>Ground units patrol designated paths with 180-degree vision cones and can be stunned by player attacks. Flying scouts hover above the battlefield with 360-degree detection radius, immune to ground-based attacks but can be temporarily disabled by EMP abilities. Static cameras cover key chokepoints with laser-grid patterns, requiring precise timing to navigate. Each enemy type demands unique tactical approaches, forcing players to adapt their stealth strategies throughout the tower.</p>
+                                <p>
+                                    <b style="font-size: 20px;">Ground Bots:</b> Standard patrolling enemies that follow predefined paths, navigate around obstacles using a nav mesh, and chase the player if detected.<br><br>
+
+                                    <b style="font-size: 20px;">Camera Bots:</b> Stationary enemies that pan left and right, scanning for the player. They do not move or pursue but can alert other enemies if the player is spotted.<br><br>
+
+                                    <b style="font-size: 20px;">Flying Bots (Drones):</b> Agile enemies that ignore walls and obstacles, moving freely across the map. They use a circular vision cone that can detect the player even behind cover. Like ground bots, they follow patrol routes and will chase the player if spotted.
+                                </p>
                             </div>
                         </div>
 
@@ -405,19 +423,25 @@
                         <div class="feature-item">
                             <div class="feature-header">
                                 <div class="feature-title">
-                                    <span class="feature-bullet">▶</span>
+                                    <button class="toggle-btn-bullet" data-feature="combat" onclick="toggleFeature('combat')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
                                     <div>
                                         <strong>Combat:</strong>
                                         <span class="feature-short">Players can stun ground enemies to slip past</span>
                                     </div>
                                 </div>
-                                <button class="toggle-btn" onclick="toggleFeature('combat')">
+                                <button class="toggle-btn" data-feature="combat" onclick="toggleFeature('combat')">
                                     <span>See more</span>
                                     <span style="font-size: 14px;">▼</span>
                                 </button>
                             </div>
                             <div class="feature-full" id="combat">
-                                <p>Roko's Omni-Tool fires charged projectiles that temporarily disable ground-based patrol bots for 8-10 seconds. The tool has a cooldown period, requiring strategic timing and resource management. Stunned enemies emit a warning signal before recovering, giving players a brief window to pass or hide. The combat system encourages non-lethal approaches, rewarding stealth over aggression. Players must choose between engaging enemies or using alternative routes, adding depth to level traversal.</p>
+                                <p>
+                                    The Omni Tool includes a <b>stun gun</b> that can temporarily disable ground bots, lowering their vision cones and allowing players to slip past undetected.
+                                    The stun gun has a <b>cooldown</b>, requiring careful timing and strategy to use effectively.
+                                    This system encourages a stealth-focused approach, where players must plan when to disable enemies and navigate the environment safely.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -490,17 +514,96 @@
                         </p>
                     </div>
 
+                    <!-- Core Features -->
                     <div class="detail-section">
-                        <h3 class="detail-title">
+                        <!-- section -->
+                        <div class="detail-title">
+                            <!-- section-title -->
                             <span class="section-icon">&gt;</span>
                             CORE_FEATURES
-                        </h3>
-                        <ul class="feature-list">
-                            <li><span class="feature-bullet">▶</span><strong>Focus Ability System:</strong> Unique mechanic revealing hidden environmental clues</li>
-                            <li><span class="feature-bullet">▶</span><strong>Atmospheric Horror:</strong> Psychological tension through environmental storytelling</li>
-                            <li><span class="feature-bullet">▶</span><strong>Madness Meter:</strong>Sane / Focus / Mad, with Madness increasing indoors and easing in halls</li>
-                        </ul>
+                        </div>
+
+                        <!-- Focus Ability System -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="focusSystem" onclick="toggleFeature('focusSystem')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Focus Ability System:</strong>
+                                        <span>Unique mechanic revealing hidden environmental clues</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="focusSystem" onclick="toggleFeature('focusSystem')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="focusSystem">
+                                <p>
+                                    The Focus ability allows players to temporarily shift the world into black and white, highlighting important objects with bright yellow outlines. 
+                                    This heightened perception not only reveals hidden items and puzzle clues but also makes unsettling elements, like tentacles and eyes, fade from view, giving players a clearer sense of their surroundings. 
+                                    Functioning as a natural hint system, Focus helps players who feel lost navigate the looping hallways and progress through the game without breaking the tension.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Atmospheric Horror: -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="atmosphericHorror" onclick="toggleFeature('atmosphericHorror')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Atmospheric Horror:</strong>
+                                        <span class="feature-short">Psychological tension through environmental storytelling</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="atmosphericHorror" onclick="toggleFeature('atmosphericHorror')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="atmosphericHorror">
+                                <p>
+                                    The horror in Sweet Spot is driven by an unsettling environment rather than direct confrontation, using lighting, sound, and <b>distorted spaces</b> to create constant psychological tension.
+                                    Subtle environmental details, <b>looping hallways</b>, and otherworldly elements suggest a looming presence, keeping players uneasy as they explore.
+                                    This approach emphasizes fear through atmosphere and discovery, allowing the environment itself to tell the story and maintain a <b>sense of dread</b> throughout the experience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Madness Meter -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="madnessMeter" onclick="toggleFeature('madnessMeter')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Madness Meter:</strong>
+                                        <span class="feature-short">Sane / Focus / Mad, with Madness increasing indoors and easing in halls</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="madnessMeter" onclick="toggleFeature('madnessMeter')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="madnessMeter">
+                                <p>
+                                    The Madness Meter dynamically shifts based on the player’s environment, increasing while inside rooms and decreasing when in hallways or areas lit by light.
+                                    When the player is <b>Sane</b>, no effects occur and gameplay remains stable.
+                                    Reaching The <b>Sweet Spot</b> unlocks the ability to use <b>Focus</b>, allowing players to reveal hidden clues and progress through puzzles.
+                                    If Madness continues to rise into the <b>Mad</b> state, the player’s vision becomes reduced with a heavy vignette effect and unsettling heartbeat can be heard, increasing tension and disorientation.
+                                    If the meter reaches its maximum, the player dies and respawns at the last spawn point, reinforcing the danger of losing control.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
 
                     <div class="detail-section">
                         <h3 class="detail-title">
