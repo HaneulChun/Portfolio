@@ -1450,6 +1450,7 @@ section {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    /* word-break: break-word; */
 }
 
 .horror-modal .detail-title {
@@ -1942,6 +1943,12 @@ section {
         .section-title {
             font-size: 1.5rem;
         }
+
+        .detail-title {
+            font-family: sans-serif; /* Just an example to adjust font */
+            font-size: 1.2rem;
+        }
+
     }
 
     @media (max-width: 1200px) {
@@ -2027,6 +2034,11 @@ section {
     @media (max-width: 415px) {
         .section-title {
             font-size: 1rem !important;
+        }
+
+        .detail-title {
+            font-family: sans-serif;
+            font-size: 1.0rem;
         }
     }
 
