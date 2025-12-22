@@ -478,7 +478,11 @@
                             </div>
                             <div class="feature-full" id="enemiesPatrol">
                                 <p>
-                                    Enemies patrol Chase and patrol
+                                    The enemy patrol system uses a list of predefined waypoints (stored as <b>List&lt;Vector3&gt;</b>) that the enemy follows in sequence.
+                                    When the enemy reaches the last waypoint, it loops back to the first one. If the enemy detects a player within range, it switches to <b>chase mode</b> until the player escapes or is caught.
+                                    After the chase, it resumes its patrol path.<br><br>
+
+                                    <b>NavMesh</b> is used for pathfinding, enabling the enemy to dynamically avoid obstacles and adjust its path as needed in the environment.
                                 </p>
                             </div>
                         </div>
@@ -502,7 +506,12 @@
                             </div>
                             <div class="feature-full" id="visionCone">
                                 <p>
-                                    visionCone
+                                    I utilized <b>Raycasting</b> to create a realistic detection system that simulates a cone-shaped field of view.
+                                    The process begins by casting <b>multiple rays</b> from a single starting point, forming a cone shape as they extend outward.
+                                    This approach ensures that the Vision Cone accurately represents a character's line of sight, as the rays spread apart at an angle.
+                                    When any of the rays hit a wall or obstacle, the <b>detection stops</b>, preventing the Vision Cone from passing through solid objects.
+                                    Additionally, the system checks for <b>collisions with players</b>, allowing it to detect their presence within the cone.
+                                    This combination of Raycast technology and the cone-shaped spread ensures an efficient and immersive way to simulate vision and detection in the game environment.
                                 </p>
                             </div>
                         </div>
@@ -526,7 +535,9 @@
                             </div>
                             <div class="feature-full" id="stunGun">
                                 <p>
-                                    Ground enemies can be stunned by stun guns, temporarily disabling their behavior (Stun Gun)
+                                    The Stun Gun spawns a hitbox in front of Roko (the player) to affect nearby enemies.
+                                    It <b>disables</b> ground enemies by halting their movement, blocking their vision, and interrupting their behavior.
+                                    A visual particle effect indicates the stun. The <b>UI</b> shows a gray icon and a progress bar that fills from bottom to top, representing the cooldown.
                                 </p>
                             </div>
                         </div>
@@ -550,7 +561,10 @@
                             </div>
                             <div class="feature-full" id="detectionMeter">
                                 <p>
-                                    player detection meter that fills when in enemy vision
+                                    The Detection Meter is a <b>UI element</b> that fills based on the player’s visibility within an enemy's vision cone.
+                                    The bar progressively fills from left to right as the detection increases. Instead of changing colors,
+                                    the meter’s <b>alpha</b> (transparency) value is adjusted: it starts fully opaque with a low alpha (green) for low detection, becomes more transparent (yellow) as the detection level rises,
+                                    and reaches full opacity (red) when fully detected. When the player is no longer detected, the alpha value decreases, and the meter fades back to green as the detection level drops.
                                 </p>
                             </div>
                         </div>
@@ -559,6 +573,7 @@
 
                     <div class="detail-links-section">
                         <!--github link to NeonNexus-->
+                        <!--
                         <a href="https://github.com/HaneulChun/NeonNexus/tree/develop" target="_blank" class="detail-link">
                             <div class="contact-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -566,7 +581,9 @@
                                 </svg>
                             </div>
                         </a>
+                        -->
                     </div>
+
                 </div>
             </div>
         </div>
@@ -731,7 +748,10 @@
                             </div>
                             <div class="feature-full" id="entitiesSystem">
                                 <p>
-                                    Eye and tentacle fade away into the wall.
+                                    In the Tentacle and Eye mechanic, the eye fades into the environment when the player focuses on it in Focus mode.
+                                    The eye constantly tracks the player’s position using a <b>dot product</b> to ensure it faces them.
+                                    As long as the player keeps focusing on it, the eye and tentacle <b>slowly fades</b> into the wall, floor, or ceiling.
+                                    If the player looks away, the eye fades back into view. Once fully faded, it disappears, creating a sense of suspense and forcing players to manage their focus strategically.
                                 </p>
                             </div>
                         </div>
@@ -755,7 +775,9 @@
                             </div>
                             <div class="feature-full" id="cameraEffects">
                                 <p>
-                                    changing camera settings
+                                    For the Camera Effects, I created a <b>Camera Effects Manager</b> to control various visual settings like Field of View (FOV), vignette, and chromatic aberration.
+                                    This manager dynamically adjusts the <b>strength</b> and type of effects based on the player's actions or in-game events, providing an immersive experience that enhances tension and atmosphere.
+                                    It allows for <b>seamless transitions</b> between different camera states, making the effects feel natural and responsive throughout gameplay.
                                 </p>
                             </div>
                         </div>
@@ -779,7 +801,10 @@
                             </div>
                             <div class="feature-full" id="fadingObjects">
                                 <p>
-                                    Fading Objects function.
+                                    For the Fading Objects mechanic, I implemented a system where objects fade in and out based on the player's Madness level.
+                                    This effect is achieved by manipulating the object’s <b>material alpha</b> value, gradually decreasing it to make the object vanish.
+                                    Some materials had issues with direct alpha changes, so for those, I <b>swapped the material</b> to a similar one before applying the fade effect.
+                                    The fading process is smooth, ensuring objects transition in and out of reality seamlessly, adding to the game’s eerie atmosphere.
                                 </p>
                             </div>
                         </div>
