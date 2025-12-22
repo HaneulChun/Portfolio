@@ -352,15 +352,17 @@
                             PROJECT_OVERVIEW
                         </h3>
                         <p>
-                            Neon Nexus is a Top Down, 2.5D, Stealth game. Where you play as the repair bot Roko, who has broken free from the AI Hive Mind. 
-                            While Navigating the Maze Like floors of the Basilisk Tower you will use Roko’s Omni-Tool to temporarily Disable Patrol Bots and to Solve Puzzles while 
+                            Neon Nexus is a Top Down, 2.5D, Stealth game. Where you play as the repair bot Roko, who has broken free from the AI Hive Mind.
+                            While Navigating the Maze Like floors of the Basilisk Tower you will use Roko’s Omni-Tool to temporarily Disable Patrol Bots and to Solve Puzzles while
                             progressing to the super computer at the top of the tower in order to Destroy the AI Hive Mind and free the other robots.
                         </p>
                     </div>
 
                     <!-- Core Features -->
-                    <div class="detail-section"> <!-- section -->
-                        <div class="detail-title"> <!-- section-title -->
+                    <div class="detail-section">
+                        <!-- section -->
+                        <div class="detail-title">
+                            <!-- section-title -->
                             <span class="section-icon">&gt;</span>
                             CORE_FEATURES
                         </div>
@@ -445,19 +447,115 @@
                             </div>
                         </div>
                     </div>
+                    <br>
 
+
+                    <!-- TECHNICAL_IMPLEMENTATION -->
                     <div class="detail-section">
-                        <h3 class="detail-title">
+                        <!-- section -->
+                        <div class="detail-title">
+                            <!-- section-title -->
                             <span class="section-icon">&gt;</span>
                             TECHNICAL_IMPLEMENTATION
-                        </h3>
-                        <ul class="feature-list">
-                            <li><span class="feature-bullet">▶</span>Enemies patrol predefined paths and switch to chase mode when the player is detected</li>
-                            <li><span class="feature-bullet">▶</span>Player detection is handled through raycast-based vision cones that check line-of-sight in real time</li>
-                            <li><span class="feature-bullet">▶</span>Ground enemies can be stunned by player projectiles, temporarily disabling their behavior</li>
-                            <li><span class="feature-bullet">▶</span>player detection meter that fills when in enemy vision</li>
-                        </ul>
+                        </div>
+
+                        <!-- Tentacle And Eye -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="enemiesPatrol" onclick="toggleFeature('enemiesPatrol')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Enemies patrol:</strong>
+                                        <span>Predefined paths and switch to chase mode when the player is detected</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="enemiesPatrol" onclick="toggleFeature('enemiesPatrol')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="enemiesPatrol">
+                                <p>
+                                    Enemies patrol Chase and patrol
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Vision Cone: -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="visionCone" onclick="toggleFeature('visionCone')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Vision Cone:</strong>
+                                        <span class="feature-short">Player detection uses raycast-based vision cones to check line-of-sight in real time</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="visionCone" onclick="toggleFeature('visionCone')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="visionCone">
+                                <p>
+                                    visionCone
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Stun gun -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="stunGun" onclick="toggleFeature('stunGun')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Stun Gun:</strong>
+                                        <span class="feature-short">Ground enemies can be stunned by stun guns, temporarily disabling their behavior</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="stunGun" onclick="toggleFeature('stunGun')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="stunGun">
+                                <p>
+                                    Ground enemies can be stunned by stun guns, temporarily disabling their behavior (Stun Gun)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- detection meter -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="detectionMeter" onclick="toggleFeature('detectionMeter')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Detection Meter:</strong>
+                                        <span class="feature-short">player detection meter that fills when in enemy vision</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="detectionMeter" onclick="toggleFeature('detectionMeter')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="detectionMeter">
+                                <p>
+                                    player detection meter that fills when in enemy vision
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
 
                     <div class="detail-links-section">
                         <!--github link to NeonNexus-->
@@ -542,8 +640,8 @@
                             </div>
                             <div class="feature-full" id="focusSystem">
                                 <p>
-                                    The Focus ability allows players to temporarily shift the world into black and white, highlighting important objects with bright yellow outlines. 
-                                    This heightened perception not only reveals hidden items and puzzle clues but also makes unsettling elements, like tentacles and eyes, fade from view, giving players a clearer sense of their surroundings. 
+                                    The Focus ability allows players to temporarily shift the world into black and white, highlighting important objects with bright yellow outlines.
+                                    This heightened perception not only reveals hidden items and puzzle clues but also makes unsettling elements, like tentacles and eyes, fade from view, giving players a clearer sense of their surroundings.
                                     Functioning as a natural hint system, Focus helps players who feel lost navigate the looping hallways and progress through the game without breaking the tension.
                                 </p>
                             </div>
@@ -603,19 +701,90 @@
                             </div>
                         </div>
                     </div>
+                    <br>
 
-
+                    <!-- TECHNICAL_IMPLEMENTATION -->
                     <div class="detail-section">
-                        <h3 class="detail-title">
+                        <!-- section -->
+                        <div class="detail-title">
+                            <!-- section-title -->
                             <span class="section-icon">&gt;</span>
                             TECHNICAL_IMPLEMENTATION
-                        </h3>
-                        <ul class="feature-list">
-                            <li><span class="feature-bullet">▶</span>Tentacle and eye entities that fade when looked at while in Focus mode</li>
-                            <li><span class="feature-bullet">▶</span>Smooth camera with adjustable FOV, vignette, and chromatic aberration effects</li>
-                            <li><span class="feature-bullet">▶</span>Objects that fade in and out of reality based on the player’s Madness</li>
-                        </ul>
+                        </div>
+
+                        <!-- Tentacle And Eye -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="entitiesSystem" onclick="toggleFeature('entitiesSystem')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Tentacle And Eye:</strong>
+                                        <span>Entities that fade when looked at while in Focus mode</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="entitiesSystem" onclick="toggleFeature('entitiesSystem')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="entitiesSystem">
+                                <p>
+                                    Eye and tentacle fade away into the wall.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Camera Effects: -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="cameraEffects" onclick="toggleFeature('cameraEffects')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Camera Effects:</strong>
+                                        <span class="feature-short">camera with adjustable FOV, vignette, and chromatic aberration effects</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="cameraEffects" onclick="toggleFeature('cameraEffects')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="cameraEffects">
+                                <p>
+                                    changing camera settings
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Fading Objects -->
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-title">
+                                    <button class="toggle-btn-bullet" data-feature="fadingObjects" onclick="toggleFeature('fadingObjects')">
+                                        <span class="feature-bullet">▶</span>
+                                    </button>
+                                    <div>
+                                        <strong>Fading Objects:</strong>
+                                        <span class="feature-short">Objects that fade in and out of reality based on the player’s Madness</span>
+                                    </div>
+                                </div>
+                                <button class="toggle-btn" data-feature="fadingObjects" onclick="toggleFeature('fadingObjects')">
+                                    <span>See more</span>
+                                    <span style="font-size: 14px;">▼</span>
+                                </button>
+                            </div>
+                            <div class="feature-full" id="fadingObjects">
+                                <p>
+                                    Fading Objects function.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
 
                     <!-- Wrapper with flexbox -->
                     <div class="detail-links-section">

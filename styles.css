@@ -1469,20 +1469,6 @@ section {
     font-size: 1.1rem;
 }
 
-.feature-list {
-    list-style: none;
-    padding: 0;
-}
-
-    .feature-list li {
-        color: #00cc66;
-        line-height: 1.7;
-        margin-bottom: 0.75rem;
-        display: flex;
-        align-items: flex-start;
-        gap: 0.75rem;
-        font-size: 1rem;
-    }
 
 .feature-bullet {
     color: #00ff88;
